@@ -1,0 +1,7 @@
+-- Write your query below
+select s.id, s.name
+from students s
+where s.department_id not in 
+(select d.id
+from departments d)
+or s.department_id is null
